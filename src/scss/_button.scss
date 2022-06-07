@@ -1,0 +1,59 @@
+@import './_variabels';
+@import './_mixins';
+
+.button-bookmark {
+      @include padding-app;
+      width: 100%;
+      
+      .button-bookmark-wrapper {
+         display: flex;
+         justify-content: space-between;
+         width: 100%;
+         
+         button {
+            padding: .45rem .35rem;
+            border-radius: 12px;
+            border: none;
+            transition: .3s;
+            
+            @media only screen and (min-width: 40.063em) and (max-width: 120em) {
+               padding: .65rem .55rem;
+            }
+         }
+         
+         .button-bookmark-main {
+            @include poppins-style(600, $text-secondary);
+            width: 75%;
+            background: $btn-main;
+            
+            @media only screen and (min-width: 40.063em) and (max-width: 120em) {
+               font-size: 1.75rem;
+            } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+            
+            &:active {
+               background: rgba($btn-main, .85);
+            }
+            
+            &:disabled {
+               background: rgba($btn-main, .55);
+            }
+         }
+         
+         .button-share {
+            width: 20%;
+            background: $bg-secondary;
+            
+            i {
+               color: $text-secondary;
+               
+               @media only screen and (min-width: 40.063em) and (max-width: 120em) {
+                  font-size: 1.35rem;
+               } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+            }
+            
+            &:active {
+               background: rgba($text-secondary, .85);
+            }
+         }
+      }
+   }

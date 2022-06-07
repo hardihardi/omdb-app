@@ -1,0 +1,39 @@
+/*
+   MIXINS FOR UTILITY
+*/
+
+@import './_fonts';
+@import './_variabels';
+
+@mixin padding-app {
+   padding: .5rem .85rem;
+}
+
+@mixin grid-centering {
+   display: grid;
+   place-items: center;
+}
+
+@mixin flex-centering {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin flex-column-centering {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+@mixin roboto-style($weight: 400, $color: $text-primary) {
+   font-family: 'Roboto', Sans-Serif;
+   font-weight: $weight;
+   color: $color;
+}
+
+@mixin poppins-style($weight: 400, $color: $text) {
+   font-family: 'Poppins', Sans-Serif;
+   font-weight: $weight;
+   color: $color;
+}
